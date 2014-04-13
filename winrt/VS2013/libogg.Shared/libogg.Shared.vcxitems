@@ -13,9 +13,18 @@
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
-  <ItemGroup>    
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\include\ogg\ogg.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\include\ogg\os_types.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\src\bitwise.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\src\framing.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)..\..\ogg.def" />
   </ItemGroup>
 </Project>
